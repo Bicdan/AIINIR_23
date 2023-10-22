@@ -4,7 +4,7 @@ from langchain.vectorstores import FAISS
 from langchain.llms import LlamaCpp
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
-from task_1.chat.loader import DocLoader
+from chat.loader import DocLoader
 
 class ChatModel:
     def __init__(self, temperature=0.75, max_tokens=2000, top_p=1,
@@ -30,7 +30,7 @@ class ChatModel:
             input_variables=['context', 'question'])
         loader = DirectoryLoader('./tinkoff-terms/', glob='*.csv', loader_cls=DocLoader)
         texts = loader.load()
-        
+
         embeddings = HuggingFaceEmbeddings(
             model_name=hf_model_name,
             model_kwargs={'device': 'cpu'},

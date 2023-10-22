@@ -11,7 +11,7 @@ class DocLoader(BaseLoader):
 
     def load(self):
         texts = []
-        meta = {"source": self.file_path}
+        meta = {'source': self.file_path}
         file_extension = self.file_path.split('.')[-1]
 
         if file_extension == 'csv':

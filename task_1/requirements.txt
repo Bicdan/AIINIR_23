@@ -1,0 +1,9 @@
+pandas==2.0.1
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
+llama_cpp_python==0.2.11
+PyPDF2==3.0.1
+fastapi==0.103.2
+uvicorn==0.23.2
+langchain==0.0.313
+pydantic==2.4.2
